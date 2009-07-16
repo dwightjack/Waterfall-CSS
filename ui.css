@@ -1,0 +1,415 @@
+/**
+* Waterfall - More UI styles
+*
+* @author      Marco Solazzi based on Bluetrip (http://bluetrip.org/)
+* @copyright     Copyright(c) 2008-2009 Marco Solazzi
+* @date          2008-11-19
+* @lastmodified  2009-07-06
+* @version       1.1.2
+* @revision      1
+*
+* @colordef      #FFC; lighter yellow (.message)
+* @colordef      #FFDD3F; light yellow (.message)
+* @colordef      #333; dark gray (.message)
+* @colordef      #c30; dark red (.error)
+* @colordef      #FCC; light red (.error)
+* @colordef      #9C6; dark green (.correct)
+* @colordef      #CF9; light green (.correct)
+*/
+
+
+/**
+* [Table of contents]
+*
+* + Icons and Buttons
+*   - classes
+*   - buttons
+* + Common Dialogs and Messages
+*   - top message
+*   - small notice
+*   - small ajax laoder
+*   - big ajax laoder
+* * Positive (disabled by default)
+* * Negative (disabled by default)
+* * Quotes( disabled by default)
+* * Forms (disabled by default)
+* * Tables (disabled by default)
+* * Clears (disabled by default)
+* * Styles (disabled by default)
+* * Links (disabled by default)
+*/
+
+/* uncomment what's needed! */
+
+/**
+* %%Icons and Buttons
+*/
+
+/* iconic links */
+.icon, .iconList a {
+	width:0px;
+	height:16px;
+	padding-left:16px;
+	overflow:hidden;
+	display:block;
+}
+
+.licon, .ricon, .liconList a, .riconList a {
+	line-height:16px;
+	padding-left:20px;
+	overflow:hidden;
+	background-repeat:no-repeat;
+	background-position:left center;
+	
+}
+.liconList a, .riconList a  {
+	display:block;
+}
+
+.riconList a {
+	padding-right:20px;
+	background-position:right center;
+}
+
+/* link icons */
+.plus {
+	background-image: url(images/bullet_plus.gif);
+}
+.minus {
+	background-image: url(images/bullet_minus.gif);
+}
+.closed, .arrow_right {
+	background-image: url(images/arrow.gif);
+}
+.opened, .arrow_down {
+	background-image: url(images/arrow_down.gif);
+}
+.arrow_up {
+	background-image: url(images/arrow_up.png);
+}
+.accept {
+	background-image:url(images/accept.png);
+}
+.warning {
+	background-image: url(images/exclamation.png);
+}
+.help {
+	background-image:url(images/help.png);
+}
+.delete, .remove {
+	background-image:url(images/delete.png);
+}
+.edit {
+	background-image:url(images/edit.png);
+}
+.accept {
+	background-image:url(images/accept.png);
+}
+.print {
+	background-image:url(images/printer.png);
+}
+.add {
+	background-image:url(images/add.png);
+}
+.email {
+	background-image:url(images/email-ico.png);
+}
+.calendar {
+	background-image:url(images/calendar.png);
+}
+.expand {
+	background-image:url(images/expand.png);
+}
+.collapse {
+	background-image:url(images/collapse.png);
+}
+.active {
+	background-image:url(images/tick.png);
+}
+.inactive {
+	background-image:url(images/cross.png);
+}
+.sort {
+	background-image:url(images/waterfall/sort.png);
+}
+
+/* buttons */
+/* Demo: particletree.com/features/rediscovering-the-button-element */
+/*
+	<button type="submit" class="button positive">
+	  <img src="css/blueprint/plugins/buttons/icons/tick.png" alt=""/> Save
+	</button>
+
+	<a class="button" href="/password/reset/">
+	  <img src="css/blueprint/plugins/buttons/icons/key.png" alt=""/> Change Password
+	</a>
+
+	<a href="#" class="button negative">
+	  <img src="css/blueprint/plugins/buttons/icons/cross.png" alt=""/> Cancel
+	</a>
+*/
+
+a.button, button.button {
+  display: block;
+  float: left;
+  margin:0 0.583em 0.667em 0;
+  padding:5px 10px 5px 7px;   /* Links */
+  border:1px solid #dedede;
+  border-top:1px solid #eee;
+  border-left:1px solid #eee;
+  background-color:#f5f5f5;
+  font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+  font-size:100%;
+  line-height:130%;
+  text-decoration:none;
+  font-weight:bold;
+  color:#565656;
+  cursor:pointer;
+}
+button.button {
+  width:auto;
+  overflow:visible;
+  padding:4px 10px 3px 7px;   /* IE6 */
+}
+button.button[type] {
+  padding:4px 10px 4px 7px;   /* Firefox */
+  line-height:17px;           /* Safari */
+}
+
+*:first-child+html  button.button[type] {
+  padding:4px 10px 3px 7px;   /* IE7 */
+}
+
+button.button img, a.button img{
+  margin:0 3px -3px 0 !important;
+  padding:0;
+  border:none;
+  width:16px;
+  height:16px;
+  float:none;
+}
+
+/* Standard Buttons */
+button.button:hover, a.button:hover{
+  background-color:#dff4ff;
+  border:1px solid #c2e1ef;
+  color:#336699;
+}
+a.button:active, button.button:active{
+  background-color:#6299c5;
+  border:1px solid #6299c5;
+  color:#fff;
+}
+
+/**
+* %%Common Dialogs and Messages
+*/
+
+/* top message */
+.message  {
+	background:#FFC;
+	border:1px solid #FFDD3F;
+	padding:5px;
+	font-weight:bold;
+	font-size:11px;
+	color:#333;
+	margin:10px 0;
+	line-height:15px;
+	background-position: 10px 5px;
+	background-repeat:no-repeat;
+	display:block;
+}
+.message.error  {
+	background-image: url(images/exclamation.png);
+	border-color:#c30;
+	padding-left: 35px;
+	background-color:#FCC;
+}
+.message.correct, .message.correct, .message.success, .message.success {
+	background-image: url(images/accept.png);
+	border-color:#9C6;
+	padding-left: 35px;
+	background-color:#CF9;
+}
+
+/* small notice */
+.notice.error, .notice, .notice.success {padding:.8em;margin-bottom:1.6em;border:2px solid #ddd;}
+.notice.error {background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4;}
+.notice {background:#FFF6BF;color:#514721;border-color:#FFD324;}
+.notice.success {background:#E6EFC2;color:#264409;border-color:#C6D880;}
+.notice.error a {color:#8a1f11; background:none; padding:0; margin:0; }
+.notice a {color:#514721; background:none; padding:0; margin:0; }
+.notice.success a {color:#264409; background:none; padding:0; margin:0; }
+
+/* small ajax laoder */
+.smallAjaxLoad {
+	display:none;
+	line-height:18px;
+	padding-left:18px;
+	background: url(images/wait16.gif) no-repeat center left;
+}
+
+/* big ajax laoder */
+.bigAjaxLoad {
+	background: url(images/ajax-loader.gif) no-repeat center center;
+	width:100px;
+	height:100px;
+	position:absolute;
+	z-index:4000;
+	top:0;
+	display:none;
+	left:0;
+}
+
+
+/**
+* %%Positive
+*/
+
+/*body .positive {
+  color:#529214;
+}
+a.positive:hover, button.positive:hover {
+  background-color:#E6EFC2;
+  border:1px solid #C6D880;
+  color:#529214;
+}
+a.positive:active, button.positive:active {
+  background-color:#529214;
+  border:1px solid #529214;
+  color:#fff;
+}*/
+
+
+/**
+* %%Negative 
+*/
+
+/*body .negative {
+  color:#d12f19;
+}
+a.negative:hover, button.negative:hover {
+  background:#fbe3e4;
+  border:1px solid #fbc2c4;
+  color:#d12f19;
+}
+a.negative:active, button.negative:active {
+  background-color:#d12f19;
+  border:1px solid #d12f19;
+  color:#fff;
+}*/
+
+
+/**
+* %%Quotes
+*/
+
+/*blockquote { border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; color: #666; }
+blockquote *:first-child:before { content: "\201C"; }
+blockquote *:first-child:after { content: "\201D"; }
+blockquote *:first-child { margin: .8em 0; } */
+
+
+/**
+* %%Forms
+*/
+
+/*fieldset { padding:1.4em; margin: 0 0 1.5em 0; border: 1px solid #ccc; }
+legend { font-weight: bold; font-size:1.2em; }
+label { font-weight: bold; }
+textarea, input[type='text'], input[type='password'], select { border: 1px solid #ccc; background: #fff; }
+textarea:hover, input[type='text']:hover, input[type='password']:hover, select:hover { border-color: #aaa; }
+textarea:focus, input[type='text']:focus, input[type='password']:focus, select:focus { border-color: #888; outline: 2px solid #ffffaa; }
+input, select { cursor: pointer; }
+input[type='text'] { cursor: text; }*/
+
+
+/**
+ * %%Tables
+ */
+
+/*.WFtable th, .WFtable td {
+	border: 1px solid #ccc;
+	padding:5px;
+	vertical-align:top;
+}
+.WFtable th {
+	font-weight:bold;
+	background-color:#ffc;
+	padding-left:15px;
+	color:#333;
+}
+.WFtable th.headerSortUp { 
+    background: #FF9A00 url(images/arrow_up.png) no-repeat left top; 
+} 
+.WFtable th.headerSortDown { 
+    background: #FF9A00 url(images/arrow_down.png) no-repeat left top; 
+}*/
+
+/**
+* %%Clears
+*/
+
+/*hr {background:#ddd;color:#ddd;clear:both;float:none;width:100%;height:.1em;margin:0 0 1.45em;border:none;}
+hr.space {background:#fff;color:#fff;}
+.clearfix:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix {display:inline-block;}
+* html .clearfix {height:1%;}
+.clearfix {display:block;}
+.clear {clear:both;}*/
+
+
+/**
+* %%Styles 
+*/
+
+/* to create serif italic dramatic text, use this class */
+/*.fancy { 
+  color: #666; 
+  font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif; 
+  font-style: italic;
+  font-weight: normal;
+}  */
+
+/* creates small caps */
+/*.caps { 
+  font-variant: small-caps; 
+  letter-spacing: 1px; 
+  text-transform: lowercase; 
+  font-size:1.2em;
+  font-weight:bold;
+  padding:0 2px;
+}*/
+
+/* use this class if a link gets an icon when it shouldn't. */
+/*body a.noicon { background:none; padding:0; margin:0; }*/
+
+
+/**
+* %%Links 
+*/
+
+/* make sure the icons are not cut */
+/*a[href^="http:"], a[href^="mailto:"], a[href^="http:"]:visited, 
+a[href$=".pdf"], a[href$=".doc"], a[href$=".xls"], a[href$=".rss"], 
+a[href$=".rdf"], a[href^="aim:"] {
+  padding:2px 22px 2px 0;
+  margin:-2px 0;
+  background-repeat: no-repeat;
+  background-position: right center;
+}*/
+
+/* external links */
+/*a.external[href^="http:"]          { background-image: url(images/external.png); padding-right: 14px; } 
+a[href^="mailto:"]        { background-image: url(images/email-ico.png); }*/
+
+/* files */
+/*a[href$=".pdf"]   { background-image: url(images/pdf.png); }  
+a[href$=".doc"]   { background-image: url(images/doc.png); }  
+a[href$=".xls"]   { background-image: url(images/xls.png); }  */
+ 
+/* misc */
+/*a[href$=".rss"], 
+a[href$=".rdf"]   { background-image: url(images/feed.png); }
+a[href^="aim:"]   { background-image: url(images/im.png); }*/
+/*a[href^="http://yourwebsite.com"] { background:none; padding:0; margin:0; }*//* prevent internal absolute links to be marked as external */

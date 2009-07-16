@@ -1,0 +1,382 @@
+/**
+* Waterfall - CSS Basic Styles
+*
+* @author        Marco Solazzi
+* @copyright     Copyright(c) 2008-2009 Marco Solazzi
+* @date          2008-05-05
+* @lastmodified  2009-07-06
+* @version       1.2
+* @revision      1
+*
+* @colordef      #F00; red (.red)
+* @colordef      #F60; orange (.orange)
+* @colordef      #03F; light blue (.blue)
+* @colordef      #00F; blue (a)
+* @colordef      #0C0; light green (.green)
+* @colordef      #FF6; bright yellow (.highlight)
+* @colordef      #CCC; silver (.border_image)
+*/
+
+
+/**
+* [Table of contents]
+*
+* * Reset
+* + Typography
+*   - standards redesign
+*   - dimensions
+*   - colors
+*   - various styles
+*   - elements flows
+*   - anchors and links styles
+* + Commons
+*   - specific body style
+*   - reset overrides
+*   - lines and clearer
+*   - form input font fixes (bugfix FF)
+* * Misc Hacks and fixes
+* + Layout
+*   - floating elements
+* + Menus
+*   - vertical menu
+*   - horizontal menu
+*   - graphic bullet menu
+* + Default Forms
+*  - on demand style
+*  - on demand structure
+*/
+
+/**
+* [References]
+* http://cssdoc.net/
+* http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+* http://www.smashingmagazine.com/2008/05/02/improving-code-readability-with-css-styleguides/
+* http://bluetrip.org/
+*
+*/
+
+/**
+* %%Reset
+*
+* @see reset.css
+*/
+@import "reset.css";
+
+/**
+* %%Typography
+*/
+
+/* standards redesign */
+h1 {
+	font-size:26px;
+}
+h2 {
+	font-size:20px;
+}
+h3 {
+	font-size:16px
+}
+p {
+	line-height:150%;
+}
+strong {
+	font-weight:bold;
+}
+del {
+	text-decoration: line-through;
+	color: #666;
+}
+cite, em, dfn  {
+	font-style:italic;
+}
+ins, dfn {
+	border-bottom: 1px solid #ccc;
+}
+sup {
+	vertical-align: super;
+}
+sub {
+	vertical-align: sub;
+}
+a abbr, a acronym {
+	border: none;
+}
+abbr, acronym {
+	text-transform: uppercase;
+	font-size: 85%;
+	letter-spacing: .1em;
+}
+abbr[title], acronym[title], dfn[title] {
+	cursor: help;
+	border-bottom: 1px dotted #ccc;
+}
+code, kbd, samp, pre, tt, var {
+	font-size: 92%;
+	font-family: monaco, "Lucida Console", courier, monospace;
+}
+
+/* dimensions */
+small, .small, sup, sub {
+	font-size:80%;
+}
+.big {
+	font-size:145%;
+}
+.thin {
+	font-weight: lighter;
+}
+
+/* colors */
+.red {
+	color:#F00;
+}
+.orange {
+	color:#F60;
+}
+.blue {
+	color:#03F;
+}
+.green {
+	color:#0C0;
+}
+
+/* various styles */
+.underline {
+	text-decoration:underline;
+}
+
+.debug {
+	outline:1px solid #F00;
+}
+
+.highlight {
+	background-color:#FF6;  /* bright yellow */
+	padding:0px 2px;
+}
+.quiet {
+	color:#666;
+}
+.loud {
+	color:#000;
+}
+
+.border_image {
+
+	padding:3px;
+	border: 1px solid #ccc;
+}
+	.border_image.left {
+		margin-right: 10px;
+	}
+	.border_image.right {
+		margin-left: 10px;
+	}
+
+/* elements flows */
+.hide {
+	display:none;
+}
+.top {
+	margin-top:0;
+	padding-top:0;
+}
+.bottom {
+	margin-bottom:0;
+	padding-bottom:0;
+}
+.center {
+	text-align: center;
+}
+	img.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	p.center {
+		margin: 0;
+	}
+
+/* anchors and links styles */
+a {
+	color:#00F; /* blue */
+    text-decoration:underline;
+}
+a:link {
+  /* rules... */
+}
+a:hover {
+  /* rules... */
+  text-decoration:none;
+}
+a:visited {
+  /* rules... */
+}
+
+/**
+* %%Commons
+*/
+
+/* reset overrides */
+table {
+    border-collapse: collapse;
+}
+
+/* lines and clearer */
+hr.separator {
+	height:1px;
+	border:0px none;
+	width:100%;
+	clear:both;
+}
+.clearer {
+	width:100%;
+	clear:both;
+	float:none;
+}
+  .clearer hr {
+           display:none;
+  }
+  
+hr.dottedline {
+	width:100%;
+	clear:both;
+	border:0px none;
+	border-bottom:1px dotted #000;
+	height:1px;
+	color:#FFF;
+}
+
+/**
+* @bugfix form input font fixes
+* @css-for Firefox
+*/
+input, textarea, select {
+	font-size:100%;
+}
+
+/**
+* %% Misc Hacks and fixes
+*/
+input[type='text'] { cursor: text; }
+
+/**
+* %%Layout
+*/
+
+/* footer sticked to the bottom */
+
+/*html,body{height: 100%}
+div#container{position: relative; height:100%}
+body>div#container{height: auto; min-height: 100%}
+div#container{margin-bottom: ___px}
+div#footer{position:absolute;bottom: 0;width: 100%}*/
+
+/* floating elements */
+#columnRight, .right {
+    float: right;
+}
+#columnLeft, .left {
+    float:left;
+}
+
+
+
+/**
+* %% Menus
+*/
+
+/* vertical menu */
+.Vmenu {
+     /* rules */
+}
+  .Vmenu li {
+       /* rules */
+  }
+
+/* horizontal menu */
+.Hmenu {
+     width: 100%;
+     overflow:hidden;
+     display:block;
+}
+  .Hmenu li {
+       float:left;
+  }
+	.Hmenu li a {
+		display:block;
+	}
+
+/**
+* graphic bullet menu
+*
+* template for a menu based on UL or OL
+* change "Mymenu" with your menu class
+* use with .Vmenu and Hmenu ie: <ul class="Hmenu Mymenu"> [...] </ul>
+*/
+
+ul.Mymenu li a {
+         /* background: url(___) no-repeat left center; */
+         /* display: block; */
+         /* line-height: ___px; */
+         /* padding-left: ___px; */
+
+}
+  .Mymenu li a.current {
+           /* rules */
+  }
+  .Mymenu li a:hover {
+           /* rules */
+  }
+
+/**
+ * %%Default Forms
+ */
+ 
+/* on demand style */ 
+.WFform.WFfancy textarea:hover, .WFform.WFfancy input[type='text']:hover,
+.WFform.WFfancy input[type='password']:hover, .WFform.WFfancy select:hover {
+	border-color: #aaa;
+}
+.WFform.WFfancy textarea:focus, .WFform.WFfancy input[type='text']:focus,
+.WFform.WFfancy input[type='password']:focus, .WFform.WFfancy select:focus {
+	border-color: #888; outline: 2px solid #ffffaa;
+}
+
+/* on demand structure */
+.WFform fieldset {
+	border:1px solid #ccc;
+	width:95%;
+	padding:7px;
+}
+	.WFform fieldset div {
+		width:100%;
+		overflow:hidden;
+		padding:3px 0;
+	}	
+		.WFform fieldset div label,.WFform fieldset div span.nolabel {
+			width:30%;
+			display:block;
+			line-height:150%;
+			float:left;
+		}
+		.WFform fieldset div input, .WFform fieldset div  {
+			width: 68%;	
+		}
+		.WFform input[type='text'], .WFform input[type='password'], .WFform textarea, .WFform select {
+			border:1px solid #ccc;
+			background: #fff;
+		}
+
+.WFform legend {
+	padding:0 3px;
+	font-weight:bold;
+}
+.WFform .button {
+	margin-top:7px;
+}
+.WFform .required label {
+	font-weight:bold;
+}
+.WFform .inputerror {
+	background-color:#FCC;
+}
