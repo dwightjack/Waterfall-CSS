@@ -1,0 +1,191 @@
+/**
+ * Waterfall - 1020px Grid System
+ * 
+ * 17 Columns ~ Margin left: 10px ~ Margin right: 10px
+ * Based on the 960.gs grid system - http://960.gs/ by Nathan Smith 
+ * Created by the Grid System Generator - v1.01 
+ * Learn more ~ http://www.gridsystemgenerator.com/
+ *
+ * @author        Marco Solazzi
+ * @copyright     Copyright(c) 2010 Marco Solazzi
+ * @licence		  GNU/GPL 
+ * 			      license.txt
+ * @date          2010-03-14
+ * @lastmodified  2010-03-14
+ * @version       2.0b
+ * @revision      1
+ */
+
+
+/* =Containers
+--------------------------------------------------------------------------------*/
+.container_17
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 1020px;
+}
+
+/* =Grid >> Global
+--------------------------------------------------------------------------------*/
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12, .grid_13, .grid_14, .grid_15, .grid_16, .grid_17 {
+	display: inline;
+	float: left;
+	position:relative;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* =Grid >> Children (Alpha ~ First, Omega ~ Last)
+--------------------------------------------------------------------------------*/
+.alpha {margin-left: 0;}
+.omega {margin-right: 0;}
+
+/* =Grid >> 17 Columns
+--------------------------------------------------------------------------------*/
+.container_17 .grid_1 {width: 40px;}
+.container_17 .grid_2 {width: 100px;}
+.container_17 .grid_3 {width: 160px;}
+.container_17 .grid_4 {width: 220px;}
+.container_17 .grid_5 {width: 280px;}
+.container_17 .grid_6 {width: 340px;}
+.container_17 .grid_7 {width: 400px;}
+.container_17 .grid_8 {width: 460px;}
+.container_17 .grid_9 {width: 520px;}
+.container_17 .grid_10 {width: 580px;}
+.container_17 .grid_11 {width: 640px;}
+.container_17 .grid_12 {width: 700px;}
+.container_17 .grid_13 {width: 760px;}
+.container_17 .grid_14 {width: 820px;}
+.container_17 .grid_15 {width: 880px;}
+.container_17 .grid_16 {width: 940px;}
+.container_17 .grid_17 {width: 1000px;}
+
+/* =Prefix Extra Space >> 17 Columns
+--------------------------------------------------------------------------------*/
+.container_17 .prefix_1 {padding-left: 60px;}
+.container_17 .prefix_2 {padding-left: 120px;}
+.container_17 .prefix_3 {padding-left: 180px;}
+.container_17 .prefix_4 {padding-left: 240px;}
+.container_17 .prefix_5 {padding-left: 300px;}
+.container_17 .prefix_6 {padding-left: 360px;}
+.container_17 .prefix_7 {padding-left: 420px;}
+.container_17 .prefix_8 {padding-left: 480px;}
+.container_17 .prefix_9 {padding-left: 540px;}
+.container_17 .prefix_10 {padding-left: 600px;}
+.container_17 .prefix_11 {padding-left: 660px;}
+.container_17 .prefix_12 {padding-left: 720px;}
+.container_17 .prefix_13 {padding-left: 780px;}
+.container_17 .prefix_14 {padding-left: 840px;}
+.container_17 .prefix_15 {padding-left: 900px;}
+.container_17 .prefix_16 {padding-left: 960px;}
+
+/* =Suffix Extra Space >> 17 Columns
+--------------------------------------------------------------------------------*/
+.container_17 .suffix_1 {padding-right: 60px;}
+.container_17 .suffix_2 {padding-right: 120px;}
+.container_17 .suffix_3 {padding-right: 180px;}
+.container_17 .suffix_4 {padding-right: 240px;}
+.container_17 .suffix_5 {padding-right: 300px;}
+.container_17 .suffix_6 {padding-right: 360px;}
+.container_17 .suffix_7 {padding-right: 420px;}
+.container_17 .suffix_8 {padding-right: 480px;}
+.container_17 .suffix_9 {padding-right: 540px;}
+.container_17 .suffix_10 {padding-right: 600px;}
+.container_17 .suffix_11 {padding-right: 660px;}
+.container_17 .suffix_12 {padding-right: 720px;}
+.container_17 .suffix_13 {padding-right: 780px;}
+.container_17 .suffix_14 {padding-right: 840px;}
+.container_17 .suffix_15 {padding-right: 900px;}
+.container_17 .suffix_16 {padding-right: 960px;}
+
+/* `Push Space >> 17 Columns
+--------------------------------------------------------------------------------*/
+.container_17 .push_1 {left: 60px;}
+.container_17 .push_2 {left: 120px;}
+.container_17 .push_3 {left: 180px;}
+.container_17 .push_4 {left: 240px;}
+.container_17 .push_5 {left: 300px;}
+.container_17 .push_6 {left: 360px;}
+.container_17 .push_7 {left: 420px;}
+.container_17 .push_8 {left: 480px;}
+.container_17 .push_9 {left: 540px;}
+.container_17 .push_10 {left: 600px;}
+.container_17 .push_11 {left: 660px;}
+.container_17 .push_12 {left: 720px;}
+.container_17 .push_13 {left: 780px;}
+.container_17 .push_14 {left: 840px;}
+.container_17 .push_15 {left: 900px;}
+.container_17 .push_16 {left: 960px;}
+
+/* `Pull Space >> 17 Columns
+--------------------------------------------------------------------------------*/
+.container_17 .pull_1 {left: -60px;}
+.container_17 .pull_2 {left: -120px;}
+.container_17 .pull_3 {left: -180px;}
+.container_17 .pull_4 {left: -240px;}
+.container_17 .pull_5 {left: -300px;}
+.container_17 .pull_6 {left: -360px;}
+.container_17 .pull_7 {left: -420px;}
+.container_17 .pull_8 {left: -480px;}
+.container_17 .pull_9 {left: -540px;}
+.container_17 .pull_10 {left: -600px;}
+.container_17 .pull_11 {left: -660px;}
+.container_17 .pull_12 {left: -720px;}
+.container_17 .pull_13 {left: -780px;}
+.container_17 .pull_14 {left: -840px;}
+.container_17 .pull_15 {left: -900px;}
+.container_17 .pull_16 {left: -960px;}
+
+
+/* ADV Fixers
+ --------------------------------------------------------------------------------*/
+.advfixer_5_250, 
+.advfixer_9_250 {
+	padding:15px;
+	width: 250px;
+}
+.advfixer_5_250.bordered, 
+.advfixer_9_250.bordered {
+	padding: 14px;
+}
+.advfixer_9_250 {
+	margin: 20px 120px;
+	width: 250px;
+}
+.advfixer_9_336 {
+	margin-left: 92px;
+	margin-right: 92px;
+	width: 336px;
+}
+.advfixer_9_336.bordered {
+	margin-left: 88px;
+	margin-right: 88px;
+	padding: 3px;
+}
+.advfixer_9_468 {
+	margin-left: 26px;
+	margin-right: 26px;
+	width: 468px;
+}
+.advfixer_9_468.bordered {
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 3px;
+}
+.article .advfixer_9_468, 
+.article .advfixer_9_336 { /* these banners are inside a text content */
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.advfixer_17_728 {
+	display: block;
+	margin: 0px 136px 20px 136px;
+	overflow: hidden;
+	width: 728px !important;
+}
+.advfixer_17_728.bordered {
+	margin-left: 130px;
+	margin-right: 130px;
+	padding: 3px;
+}

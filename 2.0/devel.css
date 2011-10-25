@@ -1,0 +1,60 @@
+/**
+ * Waterfall - Development Helpers
+ *
+ * @author        Marco Solazzi
+ * @copyright     Copyright(c) 2010-2011 Marco Solazzi
+ * @licence		  GNU/GPL 
+ * 			      license.txt
+ * @date          2010-03-14
+ * @lastmodified  2011-09-26
+ * @version       2.1b
+ * @revision      1
+ */
+
+/**
+ * [Table of contents]
+ * 
+ * * Helpers
+ *   - grid layout
+ *   - content boxes
+ */
+
+
+
+/**
+ * Helpers
+ */
+.debug {
+	outline:1px solid #F00;
+}
+
+/* grid layout */
+.debug.container_17 {
+	background-color: #FFFFFF;
+	background-image: url(img/grid_view.png);
+	background-repeat: repeat-y;
+}
+	.debug.container_17 .grid_block, 
+	.debug.container_17 .grid_block_half {
+		background-color: #CCC !important;
+		padding-bottom: 60px;		
+	}
+	.debug.container_17 .grid_row {
+		background-color: #FFC !important;
+		padding-bottom: 40px;		
+	}
+	.debug.container_17 .grid_inner {
+		background-color: #999 !important;
+		padding-bottom: 40px;		
+	}
+
+/* content boxes */
+.debug.container_17 .content_boxlist {
+	background-color: #777 !important;
+	padding: 40px 0;
+}
+	.debug.container_17 .content_boxlist > li,
+	.debug.container_17 .content_boxlist > div {
+		background-color: #FF8040 !important;
+		padding-bottom: 40px;
+	}

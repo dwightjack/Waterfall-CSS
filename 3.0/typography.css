@@ -1,0 +1,238 @@
+/**
+ * Waterfall - Typography
+ *
+ * @author        Marco Solazzi
+ * @copyright     Copyright(c) 2010-2011 Marco Solazzi
+ * @licence		  GNU/GPL 
+ * 			      license.txt
+ * @date          2011-09-26
+ * @lastmodified  2011-09-26
+ * @version       3.0a
+ * @revision      1
+ */
+
+/**
+ * [Table of contents]
+ * 
+ * + Typography
+ *   - base size and font
+ *   - headings
+ *   - text blocks
+ *   - inline text elements
+ *   - typography classes
+ *   - separators
+ *   - image flow
+ *   - quotations
+ * + Colors
+ *   - tags
+ *   - color classes
+ * * Vertical Rhythm
+ */
+
+
+/**
+* Typography 
+*/
+
+/* base size and font */
+body {
+	font: 12px sans-serif;
+}
+
+/* headings */
+h1 { font-size: 1.7em;   }
+h2 { font-size: 1.5em;   }
+h3 { font-size: 1.34em;  }
+h4 { font-size: 1.167em; }
+h5 { font-size: 1.027em; }
+h6 { font-size: 1em; }
+
+/* text blocks */
+p { font-size: 1em; }
+
+
+/* inline text elements */
+a 			{ text-decoration: underline; 	}
+a:hover 	{ text-decoration: none; 		}
+a:visited 	{ }
+
+del {
+	text-decoration: line-through;
+}
+cite, em, dfn  {
+	font-style: italic;
+}
+ins, dfn {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+
+a abbr, a acronym {
+	border: none;
+}
+abbr, acronym {
+	font-size: 0.85em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+abbr[title], acronym[title], dfn[title] {
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	cursor: help;
+}
+
+tt, var { /* for backward compatibility */
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+
+button, input, select, textarea {
+	font-size: 100%;
+	font-family: sans-serif; 
+}
+input[type='text'] { cursor: text; }
+
+/* typography classes */
+.small 		{ font-size: 75%;			 }
+.big 		{ font-size: 1.5em; 		 }
+.thin 		{ font-weight: lighter; 	 }
+.underlined { text-decoration:underline; }
+
+/* images flow */
+.article img[align='left'] {
+	margin-right: 10px;
+}
+.article img[align='right'] {
+	margin-left: 10px;
+}
+
+/* quotations */
+blockquote {
+	border-top: 1px solid #CCC; 
+	border-bottom: 1px solid #CCC; 
+	color: #666; 
+}
+blockquote *:first-child:before { 
+	content: "\201C"; 
+}
+blockquote *:first-child:after { 
+	content: "\201D"; 
+}
+blockquote *:first-child { 
+	margin: .8em 0; 
+}
+
+/**
+ * Colors
+ * 
+ * Tags' colors and color classes
+ */
+
+/* tags */
+
+del { color: #666; }
+ins, dfn ,
+abbr[title], 
+acronym[title], 
+dfn[title] { 
+	border-bottom-color: #CCC; 
+}
+
+/* color classes */
+.red 	{ color: #F00; }
+.orange { color: #F60; }
+.blue 	{ color: #03F; }
+.green 	{ color: #0C0; }
+.white 	{ color: #FFF; }
+.black 	{ color: #000; }
+.quiet 	{ color: #666; }
+.loud 	{ color: #000; }
+
+.highlighted {
+	background-color: #FF6;  /* bright yellow */
+	padding: 0px 2px;
+}
+
+.boxed {
+	border: 1px solid #CCC;
+	display: inline-block;
+	padding: 3px;	
+}
+
+::-moz-selection { 
+	background: #FE57A1;
+	color: #FFF;
+	text-shadow: none; 
+}
+::selection { 
+	background: #FE57A1; 
+	color: #FFF;
+	text-shadow: none; 
+}
+
+
+/**
+ * Vertical Rhythm 
+ * 
+ * Vertical spacing between elements inside content
+ * @see http://topfunky.com/baseline-rhythm-calculator/
+ */
+
+.article ol {
+	list-style: decimal
+}
+.article ul {
+	list-style: square
+}
+.article li {
+	margin-left: 30px
+}
+.article h6,
+.article p,
+.article ol, 
+.article ul, 
+.article pre, 
+.article table, 
+.article address, 
+.article fieldset {
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.formatted {
+	line-height: 1.5em;
+}
+
+.article h1,
+.formatted h1.title {
+	clear: both;
+	line-height: 0.9em;
+	margin-bottom: 0.9em;
+}
+.article h2,
+.formatted h2.title {
+	clear: both;
+	line-height: 1em;
+	margin-bottom: 1em;
+}
+.article h3 {
+	clear: both;
+	line-height: 1.125em;
+	margin-bottom: 1.125em;
+}
+.article h4 {
+	clear: both;
+	line-height: 1.286em;
+	margin-bottom: 1.286em;
+}
+.article h5 {
+	clear: both;
+	line-height: 1.46em;
+	margin-bottom: 1.46em;
+}
+.article p.small,
+.article small {
+	line-height: 1.8em;
+	margin-bottom: 1.8em;
+}

@@ -1,0 +1,50 @@
+/**
+ * Waterfall - HTML5 Styles (dev stage)
+ *  
+ *
+ * @author        Marco Solazzi
+ * @copyright     Copyright(c) 2010-2011 Marco Solazzi
+ * @licence		  GNU/GPL 
+ * 			      license.txt
+ * @date          2010-05-17
+ * @lastmodified  2011-09-26
+ * @version       0.1a
+ * @revision      2
+ */
+
+/**
+ * [Table of contents]
+ *
+ * * Reset
+ * * Typography 
+ */
+
+/**
+ * Reset 
+ * based on by html5doctor.com Reset Stylesheet (v1.4.1 - 2010-03-01 - Author: Richard Clark - http://richclarkdesign.com)
+ */
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary { 
+	display:block;
+}
+
+
+/**
+ * Typography 
+ */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}

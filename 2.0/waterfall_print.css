@@ -1,0 +1,46 @@
+/**
+ * Waterfall - CSS Print Styles
+ *
+ * @author        Marco Solazzi
+ * @copyright     Copyright(c) 2010-2011 Marco Solazzi
+ * @licence		  GNU/GPL 
+ * 			      license.txt
+ * @date          2010-03-14
+ * @lastmodified  2011-09-26
+ * @version       2.1b
+ * @revision      1
+ */
+
+/**
+* %%Print basic rules
+*
+* @see hartija.css
+*/
+@import "hartija.css";
+
+/**
+ * %%Expand Content
+ */
+#container, #content {
+    width:100%;
+    display:block;
+}
+
+
+/**
+ * %%Block Hiding
+ */
+#header, #footer, #columnRight, #columnLeft, #navigation {
+	display:none;
+}
+
+/**
+ * %%Printed page common layout 
+ */
+/*table { page-break-inside: avoid; }
+#comments { page-break-before: always }*/
+/* other properties 
+ * page-break-after
+ * page-break-before
+ * page-break-inside
+ */

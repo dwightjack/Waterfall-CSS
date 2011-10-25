@@ -1,0 +1,2 @@
+- This is a nice reference for the next release
+https://github.com/necolas/normalize.css/raw/master/normalize.css

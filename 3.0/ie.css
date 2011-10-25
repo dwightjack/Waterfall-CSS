@@ -1,0 +1,110 @@
+/**
+ * Waterfall - Internet Explorer CSS
+ *
+ * @author        Marco Solazzi
+ * @copyright     Copyright(c) 2010 Marco Solazzi
+ * @licence		  GNU/GPL 
+ * 			      license.txt
+ * @date          2010-03-14
+ * @lastmodified  2010-03-14
+ * @version       2.0b
+ * @revision      1
+ */
+
+/**
+ * [Table of contents]
+ * 
+ * + Fixers
+ *   - table listing
+ *   - rounded corners
+ * + Browser Specific Fixes
+ *   - expanded menu in columns
+ *   - button-like link list
+ *   - link list as table for IE6/7
+ *   - fixing display inline-block for IE6/7
+ */
+
+
+/**
+ * Fixers
+ */
+
+/* rounded corners *//* DEPRECATE???
+.rounded.radius_10 h3 {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+.rounded.radius_7 h3 {
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+	-webkit-border-radius-topleft: 7px
+	-webkit-border-radius-topright: 7px;
+	border-radius-topleft: 7px;
+	border-radius-topright: 7px;
+}
+.rounded.radius_4 h3 {
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-radius-topleft: 4px
+	-webkit-border-radius-topright:4px;
+	border-radius-topleft: 4px;
+	border-radius-topright: 4x;
+}
+*/
+/* expanded menu in columns */
+.expanded_menu {
+	display: block;
+	margin: 0;
+	
+}
+	 .expanded_menu ul li {
+		border: none !important;
+		display: block;
+		float: left;
+		font-weight: bold;
+		margin: 0 5px 0 0;
+		overflow: hidden;		
+		padding: 5px;		
+		width: 149px;		
+	}
+		.expanded_menu ul li ul, 
+		.expanded_menu ul li ul li {
+			border:none !important;
+			display:block;
+			font-weight:lighter;
+			margin:0;
+			padding:0;
+			width:100%;
+		}
+
+/* button-like link list */
+.ie7 .linklist_h ul li, 
+.ie7 .linklist_btn ul li,
+.ie6 .linklist_h ul li,
+.ie7 .linklist_btn ul li  {
+	display: block;
+	float: left;
+	margin: 0 10px;
+}
+
+/* link list as table for IE6/7 */
+.ie7 .linklist_table ul,
+.ie6 .linklist_table ul {
+	display: block;
+	width: 100%;
+}
+	.ie7 .linklist_table ul li,
+	.ie6 .linklist_table ul li {
+		border-bottom: 1px solid #ccc;
+		display: block;
+		overflow: hidden;		
+		padding: 5px 0;
+	}
+		
+/* fixing display inline-block for IE6/7 */
+.ie7 .inline_block,
+.ie6 .inline_block { 
+	 *zoom: 1;
+	 *display: inline;
+}

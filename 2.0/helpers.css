@@ -1,0 +1,614 @@
+/**
+ * Waterfall - Helpers
+ *
+ * @author        Marco Solazzi
+ * @copyright     Copyright(c) 2010-2011 Marco Solazzi
+ * @licence		  GNU/GPL 
+ * 			      license.txt
+ * @date          2010-03-14
+ * @lastmodified  2011-09-26
+ * @version       2.1b
+ * @revision      1
+ */
+
+/**
+ * [Table of contents]
+ *
+ * + Typography
+ *   - elements' flow
+ *   - text flow
+ * + Graphics
+ *  - image replacement
+ *	- message box
+ *	- AJAX loader
+ * 	- overlay AJAX loader
+ * 	- tooltip
+ *   - rounded corners
+ *   - gradient backgrounds
+ *   - bordered elements
+ *   - highlighted boxes (used as utility or to stand out)
+ *   - featured content
+ * + Layout Elements
+ *   - main elements
+ *   - inner elements
+ * + Menu / Link Lists
+ *   - expanded menu in columns (.expanded_menu ul)
+ *   - horizontal and button like linklist (.linklis_h ul, .linklist_btn ul)
+ *   - list items with much text (.linklis_v2 ul)
+ *   - link list with inner spans like a table (.linklis_table ul)
+ * + Data presentation
+ * 	- default table layout (table.content_table)
+ * 	- default style for definition lists  (dl.content_definition)
+ * + Form Style, based on Waterfall forms (.wf_form)
+ *   - form flow
+ *   - form colors
+ *   - form flow variation: labels over fields
+ * * Clearers
+ * * Icons
+ * + Link types (must be uncommented) 
+ *   - external links
+ *   - files
+ *   - misc
+ */
+
+
+
+/**
+ * Typography
+ */
+
+/* elements' flow */
+.hide, .hidden,
+.hasJS .js-hidden	{ display: none !important; visibility: hidden; }
+.hasJS .js-block	{ display: block !important; }
+.hasJS .js-inline	{ display: inline !important; }
+.hide_overflow 		{ overflow: hidden; }
+.invisible 			{ visibility: hidden; }
+.inline_block		{ display: -moz-inline-stack; /* ff2 */display: inline-block;  } /* see ie.css for compat */
+
+/* Hide only visually, but have it available for screenreaders. @see http://html5boilerplate.com/ */
+.visually_hidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard. @see http://html5boilerplate.com/ */
+.visually_hidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+.top 				{ margin-top: 0; padding-top: 0; }
+.bottom 			{ margin-bottom: 0; padding-bottom:	0; }
+.left, .float_left	{ float: left;	}
+.right, .float_right{ float: right; 	}
+.center, .centered 	{ display: block; margin-left: auto; margin-right: auto; }
+
+.clear				{ clear: both !important; display: block !important; }
+
+.boxedleft, .boxed_left		{ margin-right: 10px; float: left 	}
+.boxedright, .boxed_right  	{ margin-left: 	10px; float: right 	}	
+
+/* text flow*/
+.textcenter, .text_center 	{ text-align: center; 	}
+.textleft, .text_left		{ text-align: left; 	}
+.textright, .text_right 	{ text-align: right; 	}
+	
+
+/** 
+ * Graphics  
+ */ 
+ 
+
+/* image replacement @see http://html5boilerplate.com/ */
+.ir { 
+	display: block; 
+	border: 0; 
+	text-indent: -999em; 
+	overflow: hidden; 
+	background-color: transparent; 
+	background-repeat: no-repeat;
+	text-align: left; 
+	direction: ltr; 
+}
+	.ir br { 
+		display: none; 
+	}
+ 
+/* message box */
+.message {
+	background: #FFC;
+	background-position: 10px 5px;
+	background-repeat: no-repeat;
+	border: 1px solid #FFDD3F;
+	color: #333;
+	display: block;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.5em;
+	padding: 5px;	
+}
+.message.correct, 
+.message.success,
+.message.error {
+	background-color: #CF9;
+	background-image: url(images/accept.png);
+	border-color: #9C6;
+	padding-left: 35px;
+}
+.message.error {
+	background-color: #FCC;
+	background-image: url(images/exclamation.png);
+	border-color: #C30;	
+}
+
+/* AJAX loader */
+.smallAjaxLoad {
+	background: url(images/wait16.gif) no-repeat center left;
+	display: none;
+	line-height: 18px;
+	padding-left: 18px;	
+}
+
+/* overlay ajax loader */
+.overlayAjaxLoad {
+	background: url(images/ajax-loader.gif) no-repeat center center;
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:4000;
+	top:0;
+	display:none;
+	left:0;
+}
+
+/* tooltip */
+div.tool-tip {
+	background: #ffc;
+	border: 1px solid #D4D5AA;
+	float: left;	
+	max-width: 200px;
+	padding: 5px;
+	text-align: left;	
+	z-index: 13000;
+}
+	div.tool-tip h4 {
+		/* TODO: fix
+		 * background: url(../../system/images/selector-arrow.png) no-repeat;*/
+		font-size: 0.9em;
+		font-weight: bold;
+		margin: 0;
+		margin-top: -15px;
+		padding: 0;
+		padding-bottom: 5px;
+		padding-top: 15px;		
+	}
+	div.tool-tip p {
+		font-size: 0.9em;
+		margin: 0;
+	}
+
+/* rounded corners */
+.rounded_10, .rounded.radius_10 {
+	-moz-border-radius:	10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+.rounded_7, .rounded.radius_7 {
+	-moz-border-radius:	7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+}
+.rounded_4, .rounded.radius_4 {
+	-moz-border-radius:	4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.rounded_bottom {
+	-moz-border-radius-topleft:	0;
+	-moz-border-radius-topright: 0;
+	-webkit-border-top-left-radius: 0;
+	-webkit-border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+.rounded_up {
+	-moz-border-radius-bottomleft: 0;
+	-moz-border-radius-bottomright: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-webkit-border-bottom-right-radius:	0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius:	0;
+}
+
+/* gradient backgrounds */
+.gradient_white {
+	background-image: url("img/gradient.png");
+	background-position: top left;
+	background-repeat: repeat-x;
+}
+
+/* bordered elements */
+.bordered, .bordered_img {
+	border: 1px solid #CCC;
+}
+.bordered_img {
+	padding : 3px;
+}
+	.bordered_img img {
+		height: auto;
+		width: 100%;
+		
+	}
+img.bordered {
+	display: inline-block;
+	padding: 3px;
+}
+
+
+/* highlighted boxes (used as utility or to stand out) */
+.box_highlight,
+.box_utility {
+	background-color: #E9E9E9;
+	border: 1px solid #CCC;
+	padding: 5px;
+	
+}
+.box_highlight {
+	background-color: #FFC;
+	border-color: #FFDD3F;
+}
+
+/* featured content */
+.content_featured {
+	background-color: #FFC;
+	font-weight: bold;
+}
+
+
+/**
+ * Layout Elements
+ */
+
+/* main elements */
+.grid_block 			 { margin-bottom: 20px; }
+.grid_block_half 		 { margin-bottom: 10px; }
+.grid_block_hidden > div { margin-bottom: 20px; }
+.grid_last 				 { margin-bottom: 0px;  }
+
+/* inner elements */
+.grid_row .grid_row  { margin: auto -10px;  }
+.grid_inner 		 { margin-bottom: 20px; }
+
+
+/**
+ * Menu / Link Lists
+ */
+
+/* expanded menu in columns */
+.expanded_menu {
+	display: table;
+}
+	.expanded_menu > ul {
+		display: table-row;
+	}
+
+
+	.expanded_menu li.parent, 
+	.expanded_menu > ul > li {
+		display: table-cell;
+		font-weight: bold;
+		margin: 0 10px;
+		padding: 5px;
+	}
+		.expanded_menu li.parent li, 
+		.expanded_menu > li li {
+			font-weight: lighter;
+		}
+		
+/* horizontal and button like linklist */
+.linklist_h ul,
+.linklist_btn ul {
+	margin-left: -10px;
+	margin-right: -10px;
+}
+	.linklist_h ul li,
+	.linklist_btn ul li {
+		display: inline-block;
+		margin: 0 10px;
+	}
+		.linklist_btn ul li a {
+			background-color: #E9E9E9;
+			border: 1px solid #CCC;
+			color: #333;
+			display: inline-block;
+			padding: 5px;			
+			text-decoration: none;
+		}
+		.linklist_btn ul li a:hover {
+			background-color: #CCC;
+		}
+		
+/* list items with much text */		
+.linklist_v2 ul > li {
+	border-bottom:1px solid #ccc;
+	padding:0.6em 0 0.3em;
+}		
+
+/* link list with inner spans like a table */
+.linklist_table > ul {
+	display:table;
+	width:100%;
+}
+	.linklist_table > ul > li {
+		display:table-row;
+	}
+	.linklist_table > ul > li > span {
+		border-bottom:1px solid #ccc;
+		display: table-cell;
+		padding:5px;
+	}
+
+
+/**
+ * Data presentation
+ */
+
+/* default table layout */
+table.content_table {
+	border-bottom: 2px solid #666;
+	width: 100%;
+	display:table;
+}
+	table.content_table th,
+	table.content_table td {
+		border-bottom: 1px solid #666;
+		padding: 0.6em 0.3em;		
+	}
+	table.content_table th {
+		border-bottom-width: 2px;
+		font-weight: bold;
+	}
+		table.content_table th.sort_up { 
+	  		background: #FF9A00 url(images/arrow_up.png) no-repeat left top; 
+		} 
+		table.content_table th.sort_down { 
+		    background: #FF9A00 url(images/arrow_down.png) no-repeat left top; 
+		}
+		table.content_table th a {
+			color: #333;
+		}
+	table.content_table tbody tr:nth-child(even) {
+	    background-color: #E9E9E9;
+	}
+	table.content_table .cell_strong {
+		font-weight: bold;
+	}
+
+
+/* default style for definition lists */
+dl.content_definition {
+	border-bottom: 2px solid #666;
+	width: 100%;
+}
+	dl.content_definition dt,
+	dl.content_definition dd {
+		border-bottom: 1px solid #666;
+		padding: 0.6em 0.3em;		
+	}
+	dl.content_definition dt {
+		background-color: #E9E9E9;
+		border-bottom-width: 2px;
+		font-weight: bold;
+		margin-top: 0.8em;
+		padding: 0.4em 0.3em 0.2em;		
+	}
+
+/**
+ * Form Style, based on Waterfall forms
+ * 
+ * add class ".wf_form" to the container
+ */
+
+/* form flow */
+.wf_form fieldset {
+	border: 1px solid #CCC;
+	padding: 7px;
+}
+	.wf_form .wf_form_row {
+		margin: 0; /* reset margins */
+		overflow: hidden;
+		padding: 3px 0;
+		width: 100%;
+	}	
+		.wf_form .wf_form_row label,
+		.wf_form .wf_form_row .wf_form_nolabel {			
+			display: block;
+			float: left;
+			line-height: 1.5em;
+			vertical-align: top;
+			width: 30%;
+		}
+		.wf_form input[type='text'], 
+		.wf_form input[type='password'], 
+		.wf_form textarea, 
+		.wf_form select {
+			border: 1px solid #CCC;
+		}
+		.wf_form .wf_form_row input[type='text'], 
+		.wf_form .wf_form_row input[type='password'], 
+		.wf_form .wf_form_row textarea, 
+		.wf_form .wf_form_row select {
+			width: 60%;
+		}
+		.wf_form .wf_form_button 	{ margin-top: 7px; 	}
+
+	/* form colors */
+	.wf_form fieldset
+	.wf_form input[type='text'], 
+	.wf_form input[type='password'], 
+	.wf_form textarea, 
+	.wf_form select {
+		border-color: #CCC;
+	}
+	.wf_form input[type='text'], 
+	.wf_form input[type='password'], 
+	.wf_form textarea, 
+	.wf_form select {
+		background: #FFF;
+	}
+	
+	.wf_form label.required 	{ color:#000; }
+	.wf_form input.inputerror,
+	.wf_form select.inputerror,
+	.wf_form textarea.inputerror,
+	.wf_form input.invalid,
+	.wf_form select.invalid,
+	.wf_form textarea.invalid,
+	.wf_form input:invalid, 
+	.wf_form textarea:invalid	{
+		background-color: #FCC; 
+		border-color: #F00;
+	}
+
+	.wf_form .wf_form_required label, 
+	.wf_form .required label, /* 2.0 compatibility */
+	.wf_form legend {
+		font-weight: bold;
+	}
+
+/* form flow variation: labels over fields */
+.wf_form_vertical .wf_form_row label, 
+.wf_form_vertical .wf_form_row .wf_form_nolabel {			
+			display: block;
+			float: left;
+			line-height: 150%;
+			width: auto;
+			margin-top:0.1em;
+		}
+	.wf_form_vertical .wf_form_row input[type='text'], 
+	.wf_form_vertical .wf_form_row input[type='password'], 
+	.wf_form_vertical .wf_form_row textarea, 
+	.wf_form_vertical .wf_form_row select {
+		width: 90%;
+	}
+/**
+* Clearers
+*/
+
+/* http://sonspring.com/journal/clearing-floats */
+.hiddenclear {
+	clear: both;
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+}
+.clearer {
+	clear: both;
+	float: none;
+	width: 100%;
+}
+	.clearer hr {
+		display: none;
+	}
+	
+/* grid blocks are always cleared */
+/* Clearfix method by Jonathan Neal and Nicolas Gallagher - http://nicolasgallagher.com/better-float-containment-in-ie/ */
+
+.clearfix,
+.grid_block {
+    /* for IE 6/7 */
+    *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+    /* non-JS fallback */
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after,
+.grid_block:before,
+.grid_block:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after,
+.grid_block:after {
+    clear: both;
+}
+
+
+/**
+ * Icons
+ */
+
+.icon, .icon_list a {
+	display: inline-block;
+	height: 16px;
+	overflow: hidden;
+	padding-left: 16px;
+	width: 0px;
+}
+.l_icon, .r_icon, .l_icon_list a, .r_icon_list a {
+	background-position: left center;
+	background-repeat: no-repeat;
+	line-height: 16px;
+	padding-left: 20px;
+	overflow: hidden;
+}
+.l_icon_list a, .r_icon_list a  {
+	display: inline-block;
+}
+.r_icon_list a {
+	background-position: right center;
+	padding-right: 20px;
+	
+}
+
+.plus 			{ background-image: url(images/bullet_plus.gif); 	}
+.minus 			{ background-image: url(images/bullet_minus.gif); 	}
+.closed,
+.arrow_right 	{ background-image: url(images/arrow.gif); 			}
+.opened,
+.arrow_down 	{ background-image: url(images/arrow_down.gif); 	}
+.arrow_up 		{ background-image: url(images/arrow_up.png); 		}
+.accept 		{ background-image: url(images/accept.png); 		}
+.warning 		{ background-image: url(images/exclamation.png); 	}
+.help 			{ background-image: url(images/help.png); 			}
+.delete,
+.remove 		{ background-image: url(images/delete.png); 		}
+.edit 			{ background-image: url(images/edit.png); 			}
+.accept 		{ background-image: url(images/accept.png); 		}
+.print 			{ background-image: url(images/printer.png); 		}
+.add 			{ background-image: url(images/add.png); 			}
+.email 			{ background-image: url(images/email-ico.png); 		}
+.calendar 		{ background-image: url(images/calendar.png); 		}
+.expand 		{ background-image: url(images/expand.png); 		}
+.collapse 		{ background-image: url(images/collapse.png); 		}
+.active 		{ background-image: url(images/tick.png); 			}
+.inactive		{ background-image: url(images/cross.png); 			}
+.sort 			{ background-image: url(images/sort.png); 			}
+
+/**
+ * Link types 
+ */
+
+/* make sure the icons are not cut */
+/*a[target="_blank"], a[target="_new"], a[rel~="external"] , a[href^="mailto:"], a[href^="http:"]:visited, 
+a[href$=".pdf"], a[href$=".doc"], a[href$=".xls"], a[href$=".rss"], 
+a[href$=".rdf"], a[href^="aim:"] {
+  padding:2px 22px 2px 0;
+  margin:-2px 0;
+  background-repeat: no-repeat;
+  background-position: right center;
+}*/
+
+/* external links */
+/*a[target="_blank"], a[target="_new"], a[rel~="external"]        { background-image: url(images/external.png); padding-right: 14px; } 
+a[href^="mailto:"]        { background-image: url(images/email-ico.png); }*/
+
+/* files */
+/*a[href$=".pdf"]   { background-image: url(images/pdf.png); }  
+a[href$=".doc"]   { background-image: url(images/doc.png); }  
+a[href$=".xls"]   { background-image: url(images/xls.png); }  */
+ 
+/* misc */
+/*a[href$=".rss"], 
+a[href$=".rdf"]   { background-image: url(images/feed.png); }
+a[href^="aim:"]   { background-image: url(images/im.png); }*/
+/*a[href^="http://yourwebsite.com"] { background:none; padding:0; margin:0; }*//* prevent internal absolute links to be marked as external */
